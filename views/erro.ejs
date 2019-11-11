@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>BugTracker</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+            // navegador + relogio
+            document.onreadystatechange = () => {
+                if(document.readyState === 'interactive') {
+                    document.getElementById('userAgent').value = window.navigator.userAgent
+                    document.getElementById('userDate').value = Date()
+                    document.getElementById('userSo').value = window.navigator.platform
+                    /*
+                    console.log('Olá', window.navigator.userAgent)
+                    console.log('Olá', window.navigator.platform)
+                    console.log('Navegador', window.navigator.appCodeName)
+                    console.log('Date', new Date())
+                    console.log('Olá', window.navigator)
+                    */
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="/">BugTracker</a>
+        </nav>
+        <div class="container">
+            <div class="alert alert-danger" role="alert">
+                Ops.. Falha no formulario. <a href="/">Tente novamente!</a>
+            </div>
+        </div>
+    </body>
+</html>
